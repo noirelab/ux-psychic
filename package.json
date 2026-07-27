@@ -1,0 +1,36 @@
+{
+  "name": "ux-psychic",
+  "version": "1.0.0",
+  "description": "Predict hesitation, not minds. Behavioral UX skill for AI coding agents — audit, redesign, and implement ethical product flows.",
+  "license": "MIT",
+  "keywords": [
+    "ux",
+    "behavioral-psychology",
+    "dark-patterns",
+    "conversion",
+    "onboarding",
+    "checkout",
+    "skill",
+    "claude-code",
+    "opencode",
+    "codex",
+    "agent-skill"
+  ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "SKILL.md",
+    "agents/",
+    "references/",
+    "scripts/"
+  ],
+  "bin": {
+    "ux-psychic": "./scripts/install.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  }
+}
