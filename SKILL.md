@@ -21,6 +21,27 @@ Make the product easier to understand and complete without tricking the user. Op
 - Match the user's language in all user-facing copy and explanations.
 - Never trade accessibility, privacy, safety, or informed consent for conversion.
 
+## Evidence calibration
+
+For every finding, classify the evidence as exactly one of:
+
+- **VERIFIED DEFECT**: directly demonstrated by source code, rendered UI, or test.
+- **HEURISTIC HYPOTHESIS**: plausible UX improvement that requires measurement.
+- **COMPLIANCE RISK**: potential legal, privacy, or regulatory issue requiring
+  review by a qualified professional.
+- **UNVERIFIED**: insufficient evidence; do not recommend implementation yet.
+
+Never:
+
+- Declare a legal violation solely from a heuristic audit.
+- Invent current metric values, benchmarks, or conversion targets.
+- Treat static content as interactive solely because it has hover styles.
+- Add `tabindex` or ARIA attributes without confirming the semantic behavior.
+- Treat opening a messaging application as equivalent to sending a message.
+- Call disclosed contract duration a dark pattern by itself.
+- Recommend a form as "value before the gate" unless it produces useful
+  value for the user before requesting contact information.
+
 ## Choose the operating mode
 
 Infer the mode from the request:
