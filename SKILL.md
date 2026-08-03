@@ -1,6 +1,6 @@
 ---
 name: ux-psychic
-description: Audit, redesign, and implement product UX with behavioral psychology while preserving user autonomy. Use for onboarding, forms, signup, activation, checkout, pricing, upgrades, empty states, calls to action, conversion, retention, decision fatigue, abandonment, UX copy, or flow optimization. Inspect the existing product first; apply smart defaults, honest progress, value before gates, user investment, truthful consequence framing, and transparent contrast; reject dark patterns.
+description: Audit, redesign, and implement product UX with behavioral psychology while preserving user autonomy. Use for onboarding, forms, signup, activation, checkout, pricing, upgrades, empty states, calls to action, conversion, retention, decision fatigue, abandonment, UX copy, microcopy, labels, flow optimization, dashboards, tables, data-dense screens, visual hierarchy, spacing, typography, color, dark mode, shadows, button and input states, micro-interactions, screen transitions, and overlays. Inspect the existing product first; apply smart defaults, honest progress, value before gates, user investment, truthful consequence framing, transparent contrast, data-driven form, progressive disclosure, the invisible UI layer, signifiers, perceptual hierarchy, a response to every action, copy economy, and continuity between screens; reject dark patterns.
 ---
 
 # UX-PSYCHIC
@@ -17,6 +17,7 @@ Make the product easier to understand and complete without tricking the user. Op
 - Preserve the product's established visual language unless the user explicitly requests a redesign.
 - Distinguish observed evidence from hypotheses. Never invent analytics, research results, user behavior, or conversion impact.
 - Prefer the smallest coherent change that removes meaningful friction.
+- When unsure, choose the simpler treatment. An ambitious effect that does not land is worse than a plain one that works.
 - Keep defaults reversible, consequences truthful, prices complete, and exits easy to understand.
 - Match the user's language in all user-facing copy and explanations.
 - Never trade accessibility, privacy, safety, or informed consent for conversion.
@@ -87,7 +88,9 @@ Mark friction as one or more of:
 - **Informational** — missing price, outcome, progress, requirements, or feedback.
 - **Accessibility** — keyboard, focus, label, contrast, motion, target-size, or screen-reader failure.
 
-### 3. Apply the six lenses
+### 3. Apply the fourteen lenses
+
+Lenses 1–6 govern flows and decisions. Lenses 7–9 govern surfaces that display data: dashboards, tables, lists, logs, detail panes. Lenses 10–12 govern whether any surface can be read and acted on at all. Lenses 13–14 govern the words and the movement between screens.
 
 Read [references/principles.md](references/principles.md) when detailed guidance is needed.
 
@@ -114,6 +117,40 @@ Explain concrete, proportionate, verifiable consequences of an action or inactio
 #### Lens 6 — Transparent contrast
 
 Present prices, plans, quantities, and tradeoffs in a relevant comparison context. Show totals, billing cadence, assumptions, and comparable units. Never use fake anchors, hidden fees, misleading percentages, or decoy choices designed only to distort perception.
+
+#### Lens 7 — Data drives the form
+
+Let the shape and meaning of the data determine the UI, not a default table. A closed set of values is a chip, not free text. Numbers are right-aligned and tabular so digits align by place value. Long text truncates so other columns breathe. Inactive or deactivated rows are shaded. Identity reads faster as an avatar than as a name string. Data with a time dimension belongs in a timeline or chart, not a time-sorted table. Color comes from the data's meaning — severity, state, direction — never from decoration.
+
+#### Lens 8 — Progressive disclosure
+
+Rank every action on the spectrum of explicitness: always-visible and labeled, always-visible as an icon, revealed on hover or focus, or tucked into a popover, drawer, or menu. Place each action at the level its frequency and importance justify, and keep the primary action of any surface visible on arrival. Prefer an in-context popover or drawer to navigating the user away. Onboarding is the same idea in time: sequence one step at a time instead of dumping the whole product into a modal.
+
+#### Lens 9 — The invisible UI layer
+
+Most of what makes a dense surface usable is not visible in a static frame. Enumerate it explicitly: hover and focus affordances, tooltips on every icon-only control and ambiguous label, empty, loading, error, and zero-result states, row and cell actions, selection and bulk states, keyboard paths, indicators for comments or annotations, announcement and first-run moments. Specify these states rather than assuming them; they are usually where the work is.
+
+#### Lens 10 — Signifiers
+
+The interface should say what it affords without instructions. Containment groups related things and excludes unrelated ones. A filled background marks the selected item in a set; grayed-out text marks something inactive that will not respond. Buttons look pressable, links look followable, and a tooltip names anything an icon cannot. When a user has to be told how a control works, the control is missing a signifier — add the signifier rather than the sentence.
+
+#### Lens 11 — Perceptual hierarchy
+
+Rank the elements of a surface by what the user needs first, then encode that rank with size, weight, position, and color. Hierarchy comes from contrast: one large bold element only reads as primary if the rest are not. Put the primary element early and give it the strongest treatment; push timestamps, metadata, and secondary labels smaller and lower. Group with proximity and containers so spacing itself carries meaning, and prefer showing a relationship — an image, an icon, a connecting line — to describing it in words. Give two parts of a screen the same distinctive treatment when they refer to the same thing, so the link between a control and the data it affects is seen rather than explained.
+
+#### Lens 12 — Response to every action
+
+Every user action produces a visible response. Interactive elements need default, hover, active, disabled, and where relevant loading states; inputs additionally need focus, error with a specific message, and any warning state. Beyond acknowledging the click, confirm the outcome: an action whose result is invisible — copy, save, send, apply — needs a confirmation that says it happened. Keep these responses immediate, brief, and respectful of reduced-motion preferences.
+
+#### Lens 13 — Copy economy
+
+Say it once, in the fewest words that stay clear. A label must name what the action actually does — a button that claims rewards does not say "earn tokens." Words already carried by a heading, a section title, or the surrounding container do not need repeating in every item beneath it; each repetition adds clutter without adding meaning. Cut length only down to the point where clarity would suffer — brevity that creates ambiguity is a worse failure than a long label.
+
+#### Lens 14 — Continuity between screens
+
+A product is a sequence, not a set of screens. Specify what happens between states, not only what each state contains: what carries over, what moves, what the user's eye should follow. Where an element persists across a transition, let it move rather than disappear and reappear elsewhere, so the user does not have to relocate it. Keep scroll position, filters, selections, and entered values across navigation and return. Reserve deliberate motion for the few moments worth making memorable, and give every one of them a reduced-motion equivalent that preserves the meaning.
+
+Concrete values for typography, spacing, color, dark mode, shadows, icons, buttons, and overlays are in [references/visual-craft.md](references/visual-craft.md).
 
 ### 4. Prioritize opportunities
 
@@ -196,7 +233,7 @@ Use [references/audit-scorecard.md](references/audit-scorecard.md) for a systema
 
 ### For a redesign
 
-Return the revised flow in enough detail to implement: states, hierarchy, interactions, exact copy, edge cases, accessibility, and measurement. Include a concise rationale tied to the six lenses.
+Return the revised flow in enough detail to implement: states, hierarchy, interactions, exact copy, edge cases, accessibility, and measurement. For a data surface, list the invisible layer separately from the visible one. Include a concise rationale tied to the fourteen lenses.
 
 ### For an implementation
 
@@ -238,3 +275,11 @@ Before finishing, verify:
 - Primary and secondary actions are understandable without coercion.
 - Accessibility, privacy, cancellation, and undo paths remain intact.
 - Proposed impact is labeled as measured evidence or hypothesis.
+- Data is rendered in the form its shape implies, and color carries meaning.
+- Each action sits at the explicitness level its frequency justifies.
+- Hover, focus, tooltip, empty, loading, error, and zero-result states are specified, not assumed.
+- Selected, inactive, and grouped elements are distinguishable without being explained.
+- The most important element on each surface is the one the eye reaches first.
+- Every action produces a visible response, and invisible outcomes are confirmed.
+- Labels name the actual action, and no word repeats what its container already says.
+- Transitions, carried-over state, and preserved scroll and input are specified, with reduced-motion equivalents.

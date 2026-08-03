@@ -69,6 +69,64 @@ Do not add scores into a false scientific total. Use them to expose weak areas a
 - Is meaning independent of color alone?
 - Are loading and validation updates announced appropriately?
 
+### Data-to-form fit
+
+*Score only for dashboards, tables, lists, logs, and detail panes.*
+
+- Does each field's rendering match what the data is — chips for closed sets, right-aligned tabular numbers, avatars for identity?
+- Is time-dimensional data shown as a timeline or chart rather than a sorted table?
+- Does color encode meaning from the data, with a non-color cue alongside it?
+- Are inactive, archived, or long-text rows handled instead of rendered identically to everything else?
+
+### Disclosure and explicitness
+
+- Is the primary action of each surface visible on arrival?
+- Does each secondary action sit at an explicitness level its frequency justifies, rather than permanently occupying prime space?
+- Are small tasks handled in place instead of a route change?
+- Is anything required to complete the task hidden, and is onboarding sequenced rather than dumped?
+
+### Invisible layer completeness
+
+- Are hover, focus, selected, disabled, and bulk states defined?
+- Are empty, first-run, loading, error, and zero-results-after-filtering states defined separately?
+- Does every icon-only control have a tooltip, and is no required information tooltip-only?
+- Does each hover-revealed action have a keyboard and touch equivalent?
+
+### Signifiers
+
+- Is every interactive element identifiable as interactive before hover?
+- Are selected, active, inactive, and disabled states visually distinct and honest?
+- Is grouping visible through containment or proximity rather than explained in copy?
+- Does the interface need instructional text to explain its own controls?
+
+### Perceptual hierarchy
+
+- Does the eye reach the most important element first?
+- Is rank encoded consistently across repeated units, and does markup order match it?
+- Is contrast doing the work, or is everything emphasized at once?
+- Do reductions in size, weight, and color still meet contrast and target-size minimums?
+
+### Feedback and states
+
+- Does every control have default, hover, focus, active, disabled, and where relevant loading states?
+- Do inputs have focus, specific inline errors, and any needed warning state?
+- Are otherwise invisible outcomes — copy, save, send, apply — confirmed?
+- Are state changes announced to assistive technology, and is there a reduced-motion equivalent?
+
+### Copy economy
+
+- Does each label name the actual outcome of its action?
+- Is any word repeating what a heading or container already says?
+- Is one term used per concept across the product?
+- Has anything been shortened into ambiguity, or shortened only visually while the accessible name stayed complete?
+
+### Continuity
+
+- Are transitions between screens specified, or only the screens themselves?
+- Do persisting elements move rather than disappear and reappear?
+- Are scroll position, filters, selection, and unsent input preserved across navigation and return?
+- Does every transition have a reduced-motion equivalent, and is motion interruptible?
+
 ### Autonomy
 
 - Can users decline, cancel, leave, or change choices without obstruction?
