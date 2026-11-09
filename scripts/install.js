@@ -40,7 +40,7 @@ function copyFiltered(src, dest, skip) {
 
 function install(targetRoot, dry) {
   const dest = path.join(targetRoot, SKILL);
-  const skip = new Set(["package.json", "scripts", ".claude", ".agents", "node_modules", ".gitignore", ".npmignore", ".git"]);
+  const skip = new Set(["package.json", "package-lock.json", "README.md", "scripts", ".claude", ".agents", ".opencode", "node_modules", ".gitignore", ".npmignore", ".git"]);
   if (dry) {
     const files = walkFiles(pkgRoot).filter((f) => !skip.has(f.split(path.sep)[0]));
     console.log(`  ${dest}/`);
